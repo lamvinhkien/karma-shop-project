@@ -1,11 +1,7 @@
-
-USE Organic
+﻿USE Karma
 GO
 
 --DROP TABLE Invoice
---DROP TABLE InvoiceDetail
---DROP PROC AddInvoice
-
 CREATE TABLE Invoice(
 	InvoiceId CHAR(32) NOT NULL PRIMARY KEY,
 	CartCode CHAR(32) NOT NULL,
@@ -23,6 +19,7 @@ CREATE TABLE Invoice(
 )
 GO
 
+--DROP TABLE InvoiceDetail
 CREATE TABLE InvoiceDetail(
 	InvoiceId CHAR(32) NOT NULL,
 	ProductId INT NOT NULL,
@@ -31,6 +28,7 @@ CREATE TABLE InvoiceDetail(
 )
 GO
 
+--DROP PROC AddInvoice
 CREATE PROC AddInvoice(
 	@CartCode VARCHAR(32),
 	@InvoiceId CHAR(32),
@@ -55,15 +53,14 @@ BEGIN
 		FROM Cart JOIN Product ON Cart.CartCode = @CartCode AND Product.ProductId = Cart.ProductId;
 	DELETE FROM Cart WHERE CartCode = @CartCode;
 END
+GO
 
-SELECT * FROM Invoice
-SELECT * FROM InvoiceDetail
-SELECT * FROM Cart
 
 CREATE PROC GetInvoiceAmount(@Id CHAR(32))
 AS
 	SELECT SUM(Quantity*Price) AS Amount FROM InvoiceDetail WHERE InvoiceId = @Id;
 GO
+
 
 CREATE TABLE VnPay(
 	Amount BIGINT NOT NULL,
@@ -79,6 +76,8 @@ CREATE TABLE VnPay(
 	TxnRef VARCHAR(32) NOT NULL,
 	SecureHash VARCHAR(1024) NOT NULL,
 )
+GO
+
 
 CREATE PROC AddVnPay
 (	
@@ -100,4 +99,17 @@ INSERT INTO VnPay VALUES
 	(@Amount, @BankCode, @BankTranNo, @CardType, @OrderInfo, @PayDate, @ResponseCode, @TmnCode, @TransactionNo, @TransactionStatus, @TxnRef, @SecureHash);
 GO
 
+
+
 SELECT * FROM VnPay
+SELECT * FROM Invoice
+SELECT * FROM InvoiceDetail
+SELECT * FROM Cart
+
+
+--Thẻ test:
+--Ngân hàng	NCB
+--Số thẻ	9704198526191432198
+--Tên chủ thẻ	NGUYEN VAN A
+--Ngày phát hành	07/15
+--Mật khẩu OTP	123456

@@ -330,7 +330,7 @@ $(document).ready(function(){
 
         console.log(quantityAmount, quantityAmount.value);
 
-        value = isNaN(value) ? 0 : value;
+        value = isNaN(value) ? 1 : value;
         value++;
         quantityAmount.value = value;
     }
@@ -338,8 +338,8 @@ $(document).ready(function(){
     function decreaseValue(quantityAmount) {
         value = parseInt(quantityAmount.value, 10);
 
-        value = isNaN(value) ? 0 : value;
-        if (value > 0) value--;
+        value = isNaN(value) ? 1 : value;
+        if (value > 1) value--;
 
         quantityAmount.value = value;
     }

@@ -43,22 +43,25 @@
                         <li><a href="#"><span>Availibility</span> : @Model.Availability</a></li>
                     </ul>
                     <p>@Model.Description</p>
-                    <div class="product_count">
-                        <label for="qty">Quantity:</label>
-                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
-                            class="input-text qty">
-                        <button
-                            onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                            class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-                        <button
-                            onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                            class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
-                    </div>
-                    <div class="card_area d-flex align-items-center">
-                        <a class="primary-btn" href="#">Add to Cart</a>
-                        <a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
-                        <a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
-                    </div>
+                    <form action="/cart/add" method="post">
+                        <div class="product_count">
+                            <label for="qty">Quantity:</label>
+                            <input type="text" name="quantity" id="sst" maxlength="12" value="1" title="Quantity:"
+                                class="input-text qty">
+                            <button
+                                onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+                                class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                            <button
+                                onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 1 ) result.value--;return false;"
+                                class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                        </div>
+                        <div class="card_area d-flex align-items-center">
+                            <input type="hidden" name="productId" value="@Model.ProductId">
+                            <button class="primary-btn border-0" type="submit">Add to Cart</button>
+                            <a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
+                            <a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QhbAb4E497E=",
+  "dgSpecHash": "AimeO55EAcw=",
   "success": true,
-  "projectFilePath": "C:\\MyProject\\TMDT\\KarmaShop\\webkarma\\webapp\\WebApp.csproj",
+  "projectFilePath": "C:\\MyProject\\TMDT\\KarmaShop\\WebKarma\\WebApp\\WebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lamvi\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\lamvi\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

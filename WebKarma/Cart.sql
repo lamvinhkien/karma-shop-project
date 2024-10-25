@@ -1,5 +1,7 @@
-USE Organic
+USE Karma
 GO
+
+DROP TABLE Cart
 CREATE TABLE Cart(
 	CartCode VARCHAR(32) NOT NULL,
 	ProductId INT NOT NULL,
@@ -9,6 +11,7 @@ CREATE TABLE Cart(
 );
 GO
 
+DROP PROC AddCart
 CREATE PROC AddCart(
 	@CartCode VARCHAR(32),
 	@ProductId INT,
