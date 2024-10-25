@@ -35,3 +35,4 @@ C:\MyProject\TMDT\KarmaShop\WebKarma\webapp\obj\Debug\net8.0\WebApp.csproj.Assem
 C:\MyProject\TMDT\KarmaShop\WebKarma\webapp\obj\Debug\net8.0\WebApp.csproj.Up2Date
 C:\MyProject\TMDT\KarmaShop\WebKarma\webapp\obj\Debug\net8.0\WebApp.RazorAssemblyInfo.cache
 C:\MyProject\TMDT\KarmaShop\WebKarma\webapp\obj\Debug\net8.0\WebApp.RazorAssemblyInfo.cs
+C:\MyProject\TMDT\KarmaShop\webkarma\webapp\obj\Debug\net8.0\WebApp.sourcelink.json

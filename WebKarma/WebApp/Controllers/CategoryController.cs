@@ -6,6 +6,8 @@ public class CategoryController : BaseController
 {
     public IActionResult Index()
     {
+        ViewBag.Products = Provider.Product.GetProducts();
+        ViewBag.Categorys = Provider.Category.GetCategorys();
         return View();
     }
 }

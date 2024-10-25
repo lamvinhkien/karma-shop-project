@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\MyProject\\TMDT\\KarmaShop\\WebKarma\\webapp\\WebApp.csproj": {}
+    "C:\\MyProject\\TMDT\\KarmaShop\\webkarma\\webapp\\WebApp.csproj": {}
   },
   "projects": {
-    "C:\\MyProject\\TMDT\\KarmaShop\\WebKarma\\webapp\\WebApp.csproj": {
+    "C:\\MyProject\\TMDT\\KarmaShop\\webkarma\\webapp\\WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MyProject\\TMDT\\KarmaShop\\WebKarma\\webapp\\WebApp.csproj",
+        "projectUniqueName": "C:\\MyProject\\TMDT\\KarmaShop\\webkarma\\webapp\\WebApp.csproj",
         "projectName": "WebApp",
-        "projectPath": "C:\\MyProject\\TMDT\\KarmaShop\\WebKarma\\webapp\\WebApp.csproj",
+        "projectPath": "C:\\MyProject\\TMDT\\KarmaShop\\webkarma\\webapp\\WebApp.csproj",
         "packagesPath": "C:\\Users\\lamvi\\.nuget\\packages\\",
-        "outputPath": "C:\\MyProject\\TMDT\\KarmaShop\\WebKarma\\webapp\\obj\\",
+        "outputPath": "C:\\MyProject\\TMDT\\KarmaShop\\webkarma\\webapp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lamvi\\AppData\\Roaming\\NuGet\\NuGet.Config",

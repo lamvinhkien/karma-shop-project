@@ -6,11 +6,13 @@ public class BlogController : BaseController
 {
     public IActionResult Index()
     {
+        ViewBag.Blogs = Provider.Blog.GetBlogs();
         return View();
     }
 
-    public IActionResult Details()
+    public IActionResult Details(int id)
     {
-        return View();
+        return View(Provider.Blog.GetBlog(id));
+
     }
 }
